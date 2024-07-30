@@ -5,7 +5,7 @@ const Intro = () => {
     <div className='flex flex-col justify-center w-10/12 items-center mt-6 mb-5 mx-auto'>
 
         <div className='flex  items-end justify-center' >
-            <h1 className='font-serif text-3xl font-bold text-theme-900'>
+            <h1 className='font-serif text-5xl font-bold text-theme-900'>
                 Sustainability
             </h1>
             

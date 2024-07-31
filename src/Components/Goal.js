@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
 
-import GCard from '../components/GCard'
+import GCard from './GCard'
 
 const Goal = ({num,Info}) => {
     const [card,setCard] = useState(0);

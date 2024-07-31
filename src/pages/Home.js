@@ -1,62 +1,67 @@
-import React, { useState } from 'react'
-import Intro from "../Components/Intro"
-import Info  from "../assets/data"
-import Section3 from "../Components/Section3"
-import Features from "../Components/Features"
-import Feature from "../assets/Features"
-import Footer from "../Components/Footer"
-import Card from "../Components/Card"
-import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
+import React from "react";
+
+import { LuTreeDeciduous } from "react-icons/lu";
+import { FaLeaf } from "react-icons/fa6";
+import { GiTreehouse } from "react-icons/gi";
+import { GiPalmTree } from "react-icons/gi";
+import { GiVineLeaf } from "react-icons/gi";
+
+import Navbar from "../components/Navbar";
+import Card from "../components/Card";
+import Goal from "../components/Goal"
+import Info from '../assets/data'
+import Features from '../assets/features'
+import Obj from '../assets/obj'
+import Footer from "../components/Footer";
 
 const Home = () => {
 
-    const [card,setCard] = useState(0);
-    function clickHandler1() {
-        var val=card;
-        console.log(card);
-        if(card>0){
-            val--;
-        }
-        else{
-            val=16;
-        }
-        setCard(val);
-    }
-    function clickHandler2() {
-        var val=card;
-        console.log(card);
-        val = (val+1)%17;
-        setCard(val);
-    }
-    
-
   return (
-    <div className=' flex flex-col justify-center items-center bg-theme-25 text-xl  mx-auto'>
-        
-        {/* Section 1: Introduction */}
-            <Intro/>
-        {/* Section 2: Cards */ }
-        <div className=' flex flex-col justify-center gap-5  mx-auto text-xl items-center relative mt-9 mb-9'>
-            <p className='text-theme-900 text-5xl'>Sustainability Goals</p>
-                {/* Info.map((info, index) => {
-                    return <Card info={info} />;
-                }) */}
-            <FaArrowCircleLeft onClick={clickHandler1} size={75} className='absolute translate-y-3 -translate-x-64' />
-            {console.log(card)}
-            <Card info={Info} card={card}/>
-            <FaArrowCircleRight onClick={clickHandler2} size={75} className='absolute translate-y-3 translate-x-64'/>
-             
-        </div>
-        {/* Section 3: Sustainify */}
-        <div className='bg-theme-25 flex items-center justify-center'>
-            <Section3/>
-        </div>
-        {/* Section 4: Features */}
-        <div className='w-11/12 bg-theme-25 my-16'>
-            <Features data={Feature}/>
-        </div>
+    <div>
+      <Navbar />
+      <Card
+        card={0}
+        Icon={LuTreeDeciduous}
+        dir={0}
+        title="Sustainability"
+        Desc="Sustainability is the practice of meeting current needs without compromising the ability of future generations to meet theirs. It encompasses environmental, economic, and social dimensions, focusing on preserving natural resources, reducing pollution, and promoting equitable growth to ensure a balanced, healthy planet for all living beings."
+        last={4}
+      />
+      <Card
+        card={1}
+        Icon={FaLeaf}
+        dir={1}
+        title="Sustainability Goals"
+        Desc={<Goal num={17} Info={Info}/>}
+        last={4}
+      />
+      <Card
+        card={2}
+        Icon={GiTreehouse}
+        dir={0}
+        title="GoalsWhat is Sustainify ?"
+        Desc="A Sustainable Future Hub that is a dynamic and inclusive platform for improving knowledge and capacity of people in the key themes of sustainable development, with affordable and clean energy and climate action. This is a platform that aims at raising awareness, offering tools for work, and capacitating communities into sustainable practices. The creation of the Sustainable Future Hub would provide educational materials, interactive features, and monitoring tools to materialize actions toward a more sustainable future."
+        last={4}
+      />
+      <Card
+        card={3}
+        Icon={GiPalmTree}
+        dir={1}
+        title="Objectives :"
+        Desc={<Goal num={4} Info={Obj}/>}
+        last={4}
+      />
+      <Card
+        card={4}
+        Icon={GiVineLeaf}
+        dir={0}
+        title="Features provided by Us:"
+        Desc={<Goal num={6} Info={Features}/>}
+        last={4}
+      />
+      <Footer/>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

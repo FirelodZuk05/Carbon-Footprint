@@ -1,8 +1,9 @@
 import React from 'react'
+import "./intro.css"
 
 const Intro = () => {
   return (
-    <div className='flex flex-col justify-center w-10/12 items-center mt-6 mb-5 mx-auto border-2 rounded-md border-theme-25 shadow-2xl shadow-black'>
+    <div className='gradient1 flex flex-col justify-center w-10/12 items-center mt-6 mb-5 mx-auto border-2 rounded-md border-theme-25 shadow-2xl shadow-black'>
 
         <div className='flex  items-end justify-center' >
             <h1 className='font-serif text-5xl font-bold text-theme-900'>

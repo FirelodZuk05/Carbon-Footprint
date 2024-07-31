@@ -1,15 +1,20 @@
 import React from 'react'
 
-const Card = ({info,card}) => {
-
-  
-  
-
+const Card = ({Icon,dir,title,Desc,card,last}) => {
   return (
-        <div className='flex flex-col mx-auto max-w-sm min-w-[400px] h-80 rounded-md bg-theme-600 border-theme-900 border-2 shadow-2xl shadow-theme-900 mt-10 gap-5 ml-3 mb-3 transition-all'>
-            <div className='text-theme-100 flex items-center justify-center rounded-xl mt-2 bg-theme-900 mx-auto w-[80px] text-7xl'>{info[card].serial}</div>
-            <div className={`text-theme-900 mx-auto  w-[70%] ${info[card].title.length > 150 ? "text-xl" : "text-2xl"}`}>{info[card].title+'.'}</div>
-          </div>
+    <div className={`flex  ${dir===0?"flex-col lg:flex-row":"flex-col-reverse lg:flex-row-reverse"}  h-auto lg:h-[70vh] justify-between items-center border-2 rounded-lg shadow-xl border-green-500 overflow-hidden bg-white bg-opacity-30 backdrop-blur-3xl  ${card===0?"mt-20":"my-10"}`} >
+        <div className=' ml-4 flex flex-col h-auto lg:h-5/6 w-full lg:w-[48vw] justify-evenly gap-5 items-start'>
+            <div className='flex items-center space-x-4'>
+                <h1 className='text-3xl lg:text-5xl font-bold'>{title}</h1>
+            </div>
+            <p className='text-base lg:text-lg'>
+               {Desc}
+            </p>
+        </div>
+        <div className={`${dir===0?"bg-gradient-to-r from-white to-green-500":"bg-gradient-to-r to-white from-green-500"} flex h-[30vh] lg:h-[100vh] w-full lg:w-[48vw]  justify-center items-center`}>
+            <Icon className={`text-green-500 lg:text-white text-[5rem] lg:text-[10rem]`}/>
+        </div>
+    </div>
   )
 }
 

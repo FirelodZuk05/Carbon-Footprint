@@ -6,13 +6,13 @@ import { GiTreehouse } from "react-icons/gi";
 import { GiPalmTree } from "react-icons/gi";
 import { GiVineLeaf } from "react-icons/gi";
 
-import Navbar from "../components/Navbar";
-import Card from "../components/Card";
-import Goal from "../components/Goal"
+import Navbar from "../Components/Navbar";
+import Card from "../Components/Card";
+import Goal from "../Components/Goal"
 import Info from '../assets/data'
 import Features from '../assets/features'
 import Obj from '../assets/obj'
-import Footer from "../components/Footer";
+import Footer from "../Components/Footer";
 
 const Home = () => {
 

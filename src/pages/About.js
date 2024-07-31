@@ -1,15 +1,15 @@
 import React from 'react'
 
-import Navbar from '../components/Navbar'
-import Card from '../components/Card'
-import Goal from '../components/Goal'
+import Navbar from '../Components/Navbar'
+import Card from '../Components/Card'
+import Goal from '../Components/Goal'
 import Obj from '../assets/obj'
 import Features from '../assets/features'
 
 import { GiTreehouse } from "react-icons/gi";
 import { GiPalmTree } from "react-icons/gi";
 import { GiVineLeaf } from "react-icons/gi";
-import Footer from '../components/Footer'
+import Footer from '../Components/Footer'
 
 const About = () => {
   return (

@@ -4,7 +4,7 @@ import Navbar from '../Components/Navbar'
 import Card from '../Components/Card'
 import Goal from '../Components/Goal'
 import Obj from '../assets/obj'
-import Features from '../assets/features'
+import Features from '../assets/Features'
 
 import { GiTreehouse } from "react-icons/gi";
 import { GiPalmTree } from "react-icons/gi";

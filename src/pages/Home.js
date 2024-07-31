@@ -10,7 +10,7 @@ import Navbar from "../Components/Navbar";
 import Card from "../Components/Card";
 import Goal from "../Components/Goal"
 import Info from '../assets/data'
-import Features from '../assets/features'
+import Features from '../assets/Features'
 import Obj from '../assets/obj'
 import Footer from "../Components/Footer";
 

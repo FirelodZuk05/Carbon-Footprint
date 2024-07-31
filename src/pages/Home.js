@@ -4,13 +4,13 @@ import Info  from "../assets/data"
 import Section3 from "../Components/Section3"
 import Features from "../Components/Features"
 import Feature from "../assets/Features"
+import Footer from "../Components/Footer"
 import Card from "../Components/Card"
 import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
 
 const Home = () => {
 
     const [card,setCard] = useState(0);
-    const [fcard,setFcard] = useState(0);
     function clickHandler1() {
         var val=card;
         console.log(card);
@@ -28,23 +28,7 @@ const Home = () => {
         val = (val+1)%17;
         setCard(val);
     }
-    function clickHandler3() {
-        var val=fcard;
-        console.log(fcard);
-        if(fcard>0){
-            val--;
-        }
-        else{
-            val=5;
-        }
-        setFcard(val);
-    }
-    function clickHandler4() {
-        var val=fcard;
-        console.log(fcard);
-        val = (val+1)%6;
-        setFcard(val);
-    }
+    
 
   return (
     <div className=' flex flex-col justify-center items-center bg-theme-25 text-xl  mx-auto'>
@@ -68,8 +52,8 @@ const Home = () => {
             <Section3/>
         </div>
         {/* Section 4: Features */}
-        <div className='w-11/12 bg-theme-25 my-14'>
-            <Features data={Feature} card={fcard} clickHandler1={clickHandler3} clickHandler2={clickHandler4}/>
+        <div className='w-11/12 bg-theme-25 my-16'>
+            <Features data={Feature}/>
         </div>
     </div>
   )

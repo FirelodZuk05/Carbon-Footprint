@@ -3,6 +3,7 @@ import {Route,Routes} from "react-router-dom"
 import Home from "./pages/Home" 
 import About from "./pages/About"
 import Contact from "./pages/Contact";
+import AffordableCleanEnergy from "./pages/AffordableCleanEnergy";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
           <Route path="/" element= {<Home/>} />
           <Route path="/about" element= {<About/>} />
           <Route path="/contact-us" element= {<Contact/>} />
-          <Route path="/energy-calculator" element= {<Home/>} />
+          <Route path="/energy-calculator" element= {<AffordableCleanEnergy/>} />
           <Route path="/carbon-footprint-calculator" element= {<Home/>} />
         </Routes>
 

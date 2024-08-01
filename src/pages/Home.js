@@ -39,7 +39,7 @@ const Home = () => {
         card={2}
         Icon={GiTreehouse}
         dir={0}
-        title="GoalsWhat is Sustainify ?"
+        title="What is Sustainify ?"
         Desc="A Sustainable Future Hub that is a dynamic and inclusive platform for improving knowledge and capacity of people in the key themes of sustainable development, with affordable and clean energy and climate action. This is a platform that aims at raising awareness, offering tools for work, and capacitating communities into sustainable practices. The creation of the Sustainable Future Hub would provide educational materials, interactive features, and monitoring tools to materialize actions toward a more sustainable future."
         last={4}
       />

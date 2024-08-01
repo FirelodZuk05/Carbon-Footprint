@@ -1,54 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import { FaBolt, FaTimes, FaBars } from 'react-icons/fa';
+import React from 'react'
+import { FaBolt} from 'react-icons/fa';
 import { PiBrainLight, PiWindmill } from "react-icons/pi";
 import { WiSolarEclipse } from "react-icons/wi";
-import { Link } from 'react-scroll';
-import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
 import 'tailwindcss/tailwind.css'; // Ensure you import TailwindCSS
 import WindEnergyCalculator from '../Components/WindEnergyCalculator';
 import SolarEnergyCalculator from '../Components/SolarEnergyCalculator';
+import Navbar from '../Components/Navbar'
+import Footer from '../Components/Footer'
 
 const AffordableCleanEnergy = () => {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const handleToggle = () => {
-        setIsOpen(!isOpen);
-    };
 
     return (
         <div className="flex flex-col gap-4 p-8 bg-white">
-            <nav className='fixed top-0 left-0 w-full bg-white py-4 z-50 shadow-md'>
-                <div className='flex justify-between items-center px-4'>
-                    <div className='text-2xl font-bold'>
-                        <span className='text-black'>Sustainify</span>
-                    </div>
-
-                    {/* Hamburger Menu Button */}
-                    <div className='lg:hidden cursor-pointer' onClick={handleToggle}>
-                        {isOpen ? <FaTimes className='text-black text-2xl' /> : <FaBars className='text-black text-2xl' />}
-                    </div>
-
-                    {/* Navbar Links */}
-                    <div className={`lg:flex lg:items-center lg:gap-6 flex-col lg:flex-row absolute lg:static top-16 left-0 w-full lg:w-auto bg-white lg:bg-transparent lg:p-0 p-4 transition-all duration-300 ${isOpen ? 'block' : 'hidden'}`}>
-                        <ul className='flex flex-col lg:flex-row lg:space-x-6 space-y-4 lg:space-y-0'>
-                            <li>
-                                <Link to="about" smooth={true} duration={500} className='cursor-pointer text-black hover:text-blue-700 transition-colors text-lg font-semibold'>About</Link>
-                            </li>
-                            <li>
-                                <Link to="objectives-solutions" smooth={true} duration={500} className='cursor-pointer text-black hover:text-blue-700 transition-colors text-lg font-semibold'>Objectives & Solutions</Link>
-                            </li>
-                            <li>
-                                <Link to="solar-energy" smooth={true} duration={500} className='cursor-pointer text-black hover:text-blue-700 transition-colors text-lg font-semibold'>Solar Energy</Link>
-                            </li>
-                            <li>
-                                <Link to="wind-energy" smooth={true} duration={500} className='cursor-pointer text-black hover:text-blue-700 transition-colors text-lg font-semibold'>Wind Energy</Link>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-
+            
+            <Navbar/>
             {/* About Affordable Clean Energy */}
             <div id="about" className='flex flex-col lg:flex-row h-auto lg:h-[70vh] gap-5 justify-between items-center border-2 rounded-lg shadow-xl border-green-500 overflow-hidden bg-white bg-opacity-30 backdrop-blur-3xl mt-20'>
                 <div className='flex flex-col h-auto lg:h-5/6 w-full lg:w-[48vw] justify-evenly items-start p-8'>
@@ -116,6 +82,7 @@ const AffordableCleanEnergy = () => {
                 </div> */}
                 <WindEnergyCalculator />
             </div>
+            <Footer/>
         </div>
     );
 };

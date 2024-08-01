@@ -1,9 +1,9 @@
 import React from 'react'
 
-import Card from '../components/Card'
-import Navbar from '../components/Navbar'
-import Form from '../components/Form'
-import Footer from '../components/Footer'
+import Card from '../Components/Card'
+import Navbar from '../Components/Navbar'
+import Form from '../Components/Form'
+import Footer from '../Components/Footer'
 
 import { FaWpforms } from "react-icons/fa6";
 import { FaPhone } from "react-icons/fa6";

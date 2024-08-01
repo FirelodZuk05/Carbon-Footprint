@@ -1,17 +1,45 @@
 import React from 'react'
-import Section3 from '../Components/Section3'
-import Feature from "../assets/Features"
-import Features from "../Components/Features"
+
+import Navbar from '../Components/Navbar'
+import Card from '../Components/Card'
+import Goal from '../Components/Goal'
+import Obj from '../assets/obj'
+import Features from '../assets/Features'
+
+import { GiTreehouse } from "react-icons/gi";
+import { GiPalmTree } from "react-icons/gi";
+import { GiVineLeaf } from "react-icons/gi";
+import Footer from '../Components/Footer'
 
 const About = () => {
   return (
-    <div className=' flex flex-col justify-center items-center bg-theme-25 text-xl  mx-auto'>
-        <div className='bg-theme-25 flex items-center justify-center'>
-            <Section3/>
-        </div>
-        <div className='w-11/12 bg-theme-25 my-16'>
-            <Features data={Feature}/>
-        </div>
+    <div>
+        <Navbar/>
+        <Card
+        card={0}
+        Icon={GiTreehouse}
+        dir={0}
+        title="GoalsWhat is Sustainify ?"
+        Desc="A Sustainable Future Hub that is a dynamic and inclusive platform for improving knowledge and capacity of people in the key themes of sustainable development, with affordable and clean energy and climate action. This is a platform that aims at raising awareness, offering tools for work, and capacitating communities into sustainable practices. The creation of the Sustainable Future Hub would provide educational materials, interactive features, and monitoring tools to materialize actions toward a more sustainable future."
+        last={2}
+      />
+      <Card
+        card={1}
+        Icon={GiPalmTree}
+        dir={1}
+        title="Objectives :"
+        Desc={<Goal num={4} Info={Obj}/>}
+        last={4}
+      />
+      <Card
+        card={2}
+        Icon={GiVineLeaf}
+        dir={0}
+        title="Features provided by Us:"
+        Desc={<Goal num={6} Info={Features}/>}
+        last={4}
+      />
+      <Footer/>
     </div>
   )
 }

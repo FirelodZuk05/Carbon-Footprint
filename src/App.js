@@ -4,6 +4,7 @@ import Home from "./pages/Home"
 import About from "./pages/About"
 import Contact from "./pages/Contact";
 import AffordableCleanEnergy from "./pages/AffordableCleanEnergy";
+import CarbonFoot from "./pages/CarbonFoot";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
           <Route path="/about" element= {<About/>} />
           <Route path="/contact-us" element= {<Contact/>} />
           <Route path="/energy-calculator" element= {<AffordableCleanEnergy/>} />
-          <Route path="/carbon-footprint-calculator" element= {<Home/>} />
+          <Route path="/carbon-footprint-calculator" element= {<CarbonFoot/>} />
         </Routes>
 
    </div>
